@@ -7,6 +7,9 @@ class Queue(object):
         self.size = 0
 
     def enQ(self,element):
+        """
+            Inserts element at the rear of queue.
+        """
         if self.size >= self.length :
             print("Queue full!!")
         else:
@@ -15,6 +18,9 @@ class Queue(object):
             self.size += 1 
 
     def deQ(self):
+        """
+            Removes element from the front of queue.
+        """
         if self.size <= 0:
             print("Queue Empty!!")
         else:
@@ -24,9 +30,15 @@ class Queue(object):
 
 
     def printQ(self):
+        """
+            Prints Queue elements.
+        """
         print([x for x in self.queue])
 
     def getSize(self):
+        """
+            Returns the size of Queue.
+        """
         return self.size
 
 q = Queue(5)
@@ -34,4 +46,7 @@ q.enQ(20)
 q.enQ(12)
 print(q.getSize())
 q.printQ()
+q.deQ()
+q.printQ()
+
 
